@@ -15,27 +15,33 @@
     <h1>Ben jij ICT waardig?</h1>
   </div>
   <div class="center">
-    <div>
+    <div class="progressBar">
       <h2>Programmeren front-end:</h2>
       <div class="bar">
-        <div class="progress"></div>
+        <div id="frontEndProgress" class="progress"></div>
       </div>
     </div>
 
-    <div>
+    <div class="progressBar">
       <h2>Programmeren back-end:</h2>
       <div class="bar">
-        <div class="progress"></div>
+        <div id="backEndProgress" class="progress"></div>
       </div>
     </div>
     
-    <div>
+    <div class="progressBar">
       <h2>Systeembeheer:</h2>
       <div class="bar">
-        <div class="progress"></div>
+        <div id="systeembeheerProgress" class="progress"></div>
       </div>
     </div>
   </div>
 </body>
-
+<script>
+  setTimeout(function() {
+    document.getElementById("frontEndProgress").style.width = '600px';
+    document.getElementById("backEndProgress").style.width = '600px';
+    document.getElementById("systeembeheerProgress").style.width = '600px';
+  }, 100)
+</script>
 </html>
