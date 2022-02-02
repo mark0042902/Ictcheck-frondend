@@ -16,16 +16,84 @@
   </div>
   <div class="center">
     <h2 class="question">Vraag</h2>
-    <form>
-      <input class="answer" type="radio" name="" id=""><br>
-      <input class="answer" type="radio" name="" id=""><br>
-      <input class="answer" type="radio" name="" id=""><br>
+    <form onsubmit="submitAnswer(event)">
+      <input class="answer" type="radio" name="answer" id="answer-1-input"><span id="answer-1"></span><br>
+      <input class="answer" type="radio" name="answer" id="answer-2-input"><span id="answer-2"></span><br>
+      <input class="answer" type="radio" name="answer" id="answer-3-input"><span id="answer-3"></span><br>
       <div class="submitAnswers">
         <input class="formSubmit" type="submit" value="Volgende">
       </div>
     </form>
 
   </div>
+
+  <script src="../globalVariables.js"></script>
+
+  <script>
+    let questions = [];
+
+    const givenAnswers = [];
+
+    window.onload = async function() {
+      questions = await getQuestions();
+      nextQuestion();
+    }
+
+    let questionId = 0;
+
+    async function getQuestions() {
+      const res = await fetch(backendUrl + "/questions");
+      const json = await res.json();
+
+      return json;
+    }
+
+    async function getAnswers(questionId) {
+      const res = await fetch(backendUrl + "/answers/" + questionId);
+      const json = await res.json();
+
+      return json;
+    }
+    
+    async function nextQuestion() {
+      questionId++;
+
+      const question = questions[questionId];
+      const text = question[1];
+
+      const answers = await getAnswers(question[0]);
+
+      document.querySelector(".question").innerHTML = text;
+
+      document.querySelector("#answer-1").innerHTML = answers[0][1];
+      document.querySelector("#answer-2").innerHTML = answers[1][1];
+      document.querySelector("#answer-3").innerHTML = answers[2][1];
+
+      document.querySelector("#answer-1-input").value = answers[0][3];
+      document.querySelector("#answer-2-input").value = answers[1][3];
+      document.querySelector("#answer-3-input").value = answers[2][3];
+    }
+
+    async function submitAnswer(e) {
+      e.preventDefault();
+
+      const answers = document.getElementsByName("answer");
+      const selected = Array.from(answers).find(radio => radio. checked);
+      const value = selected.value;
+
+      if(value) {
+        givenAnswers.push({ question: questionId, points: Number(value) });
+
+        console.log(givenAnswers);
+
+        await nextQuestion();
+
+        console.log("Did nextquestion");
+      } else {
+        //Geef "niet ingevuld"-melding...
+      }
+    }
+  </script>
 </body>
 
 </html>
