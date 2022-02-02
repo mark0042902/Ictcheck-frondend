@@ -4,17 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="style.css">
   <title>Quiz</title>
 </head>
 
 <body>
-<div class="header">
-  <h1>Ben jij ICT waardig?</h1>
-</div>
+  <div class="header">
+    <h1>Ben jij ICT waardig?</h1>
+  </div>
+  
 
-<button type="button" href="">Click Me!</button>
+  <button class="hintbutton" onclick="printhint()" >Klik hier voor een hint</button>
+  <div id="result"></div>
+  
+  
+  <button class="hiddenbutton1" onclick="alert('Haha verkeerde knop :)');">Bezoek de quiz pagina</button>
+  <button class="hiddenbutton2" onclick="visitPage();">Bezoek de quiz pagina</button>
+
+<script>
+  function visitPage(){
+      window.location='./quiz/quiz.html';
+  }
+
+  var myArray=["klik rechtsonderin"]
+  function printhint(){
+   myArray.forEach(function(el){
+     document.getElementById('result').innerHTML+='<br>' +el;
+   })
+}
+</script>
+  
 </body>
 
 </html>
