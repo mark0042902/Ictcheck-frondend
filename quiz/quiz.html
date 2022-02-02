@@ -84,6 +84,8 @@
       if(value) {
         givenAnswers.push({ question: questionId, points: Number(value) });
 
+        localStorage.setItem("givenAnswers", JSON.stringify(givenAnswers));
+
         console.log(givenAnswers);
 
         await nextQuestion();
