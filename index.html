@@ -13,8 +13,27 @@
   <div class="header">
     <h1>Ben jij ICT waardig?</h1>
   </div>
+  
 
-  <button type="button" href="">Click Me!</button>
+  <button onclick="printhint()" >click me</button>
+  
+  
+  
+  <button onclick="visitPage();">Visit Page Now</button>
+
+<script>
+  function visitPage(){
+      window.location='./quiz/quiz.html';
+  }
+
+  var myArray=["stone","paper","scissors"]
+  function printhint(){
+   myArray.forEach(function(el){
+     document.getElementById('result').innerHTML+='<br>' +el;
+   })
+}
+</script>
+  
 </body>
 
-</html
+</htmlx
