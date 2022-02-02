@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,18 +15,19 @@
   </div>
   
 
-  <button onclick="printhint()" >click me</button>
+  <button class="hintbutton" onclick="printhint()" >Klik hier voor een hint</button>
+  <div id="result"></div>
   
   
-  
-  <button onclick="visitPage();">Visit Page Now</button>
+  <button class="hiddenbutton1" onclick="alert('Haha verkeerde knop :)');">Bezoek de quiz pagina</button>
+  <button class="hiddenbutton2" onclick="visitPage();">Bezoek de quiz pagina</button>
 
 <script>
   function visitPage(){
       window.location='./quiz/quiz.html';
   }
 
-  var myArray=["stone","paper","scissors"]
+  var myArray=["klik rechtsonderin"]
   function printhint(){
    myArray.forEach(function(el){
      document.getElementById('result').innerHTML+='<br>' +el;
