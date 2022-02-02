@@ -1,33 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  .header {
-    width: 100vw;
-    padding: 30px;
-    background-color: aqua;
-  }
+.header {
+  width: 100vw;
+  padding: 30px;
+  background-color: aqua;
+  box-sizing: border-box;
+}
 
-  .center {
-    padding: 150px;
-  }
-
-  .question {
-    padding: 20px;
-  }
-
-  .answer {
-    margin: 50px 0px 0px 40px;
-  }
-
-  .submitAnswers {
-    margin: 50px;
-    display: flex;
-    justify-content: center;
-  }
-  .formSubmit {
-    width: 200px;
-    height: 50px;
-    margin-top: 50px;
-  }
+.center {
+  padding: 150px;
+}
