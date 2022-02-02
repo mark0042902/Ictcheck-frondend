@@ -1,20 +1,22 @@
-.result {
-    margin: 150px;
+.center {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 500px;
+    height: 900px;
 }
 
 .bar {
-    width: 1000px;
     background-color: black;
     height: 30px;
 }
+
 .progress {
-    position: absolute;
-    width: 100px;
+    width: 0px;
     height: 30px;
-    z-index: 1;
     background-color: green;
+    transition: width 2s;
+}
+
+.progressBar {
+    width: 100%;
 }

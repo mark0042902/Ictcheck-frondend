@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .header {
@@ -11,23 +13,4 @@
 
   .center {
     padding: 150px;
-  }
-
-  .question {
-    padding: 20px;
-  }
-
-  .answer {
-    margin: 50px 0px 0px 40px;
-  }
-
-  .submitAnswers {
-    margin: 50px;
-    display: flex;
-    justify-content: center;
-  }
-  .formSubmit {
-    width: 200px;
-    height: 50px;
-    margin-top: 50px;
   }
