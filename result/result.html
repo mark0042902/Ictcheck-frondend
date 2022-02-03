@@ -18,21 +18,21 @@
     <h2>Jouw score:</h2>
 
     <div class="progressBar">
-      <h2>Programmeren front-end:</h2>
+      <h2>Programmeren front-end <span id="frontendScore"></span>:</h2>
       <div class="bar">
         <div id="frontEndProgress" class="progress"></div>
       </div>
     </div>
 
     <div class="progressBar">
-      <h2>Programmeren back-end:</h2>
+      <h2>Programmeren back-end <span id="backendScore"></span>:</h2>
       <div class="bar">
         <div id="backEndProgress" class="progress"></div>
       </div>
     </div>
     
     <div class="progressBar">
-      <h2>Systeembeheer:</h2>
+      <h2>Systeembeheer <span id="beheerScore"></span>:</h2>
       <div class="bar">
         <div id="systeembeheerProgress" class="progress"></div>
       </div>
@@ -68,6 +68,10 @@
     document.getElementById("frontEndProgress").style.width = frontend + "%";
     document.getElementById("backEndProgress").style.width = backend + "%";
     document.getElementById("systeembeheerProgress").style.width = beheer + "%";
+
+    document.querySelector("#frontendScore").innerHTML = "(" + Math.round(frontend) + "%)";
+    document.querySelector("#backendScore").innerHTML = "(" + Math.round(backend) + "%)";
+    document.querySelector("#beheerScore").innerHTML = "(" + Math.round(beheer) + "%)";
   }, 100)
 </script>
 </html>
