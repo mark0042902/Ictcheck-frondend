@@ -1,1 +1,1 @@
-const backendUrl = "http://localhost/ICTcheck-backend/Ictcheck-backend";
+const backendUrl = "http://localhost/Ictcheck-backend/";
