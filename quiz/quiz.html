@@ -39,7 +39,7 @@
       nextQuestion();
     }
 
-    let questionId = 0;
+    let questionId = -1;
 
     async function getQuestions() {
       const res = await fetch(backendUrl + "/questions");
@@ -48,8 +48,8 @@
       return json;
     }
 
-    async function getAnswers(questionId) {
-      const res = await fetch(backendUrl + "/answers/" + questionId);
+    async function getAnswers(id) {
+      const res = await fetch(backendUrl + "/answers/" + id);
       const json = await res.json();
 
       return json;
@@ -58,20 +58,26 @@
     async function nextQuestion() {
       questionId++;
 
-      const question = questions[questionId];
-      const text = question[1];
+      console.log(questionId, questions.length);
 
-      const answers = await getAnswers(question[0]);
+      if(questionId < questions.length) {
+        const question = questions[questionId];
+        const text = question[1];
 
-      document.querySelector(".question").innerHTML = text;
+        const answers = await getAnswers(questionId + 1);
 
-      document.querySelector("#answer-1").innerHTML = answers[0][1];
-      document.querySelector("#answer-2").innerHTML = answers[1][1];
-      document.querySelector("#answer-3").innerHTML = answers[2][1];
+        document.querySelector(".question").innerHTML = text;
 
-      document.querySelector("#answer-1-input").value = answers[0][3];
-      document.querySelector("#answer-2-input").value = answers[1][3];
-      document.querySelector("#answer-3-input").value = answers[2][3];
+        document.querySelector("#answer-1").innerHTML = answers[0][1];
+        document.querySelector("#answer-2").innerHTML = answers[1][1];
+        document.querySelector("#answer-3").innerHTML = answers[2][1];
+
+        document.querySelector("#answer-1-input").value = answers[0][3];
+        document.querySelector("#answer-2-input").value = answers[1][3];
+        document.querySelector("#answer-3-input").value = answers[2][3];
+      } else {
+        location.href = "../result/result.html";
+      }
     }
 
     async function submitAnswer(e) {
@@ -82,15 +88,11 @@
       const value = selected.value;
 
       if(value) {
-        givenAnswers.push({ question: questionId, points: Number(value) });
+        givenAnswers.push({ question: questionId, category: questions[questionId][2], points: Number(value) });
 
         localStorage.setItem("givenAnswers", JSON.stringify(givenAnswers));
 
-        console.log(givenAnswers);
-
         await nextQuestion();
-
-        console.log("Did nextquestion");
       } else {
         //Geef "niet ingevuld"-melding...
       }

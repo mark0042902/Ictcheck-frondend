@@ -39,9 +39,33 @@
 </body>
 <script>
   setTimeout(function() {
-    document.getElementById("frontEndProgress").style.width = '600px';
-    document.getElementById("backEndProgress").style.width = '600px';
-    document.getElementById("systeembeheerProgress").style.width = '600px';
+    let givenAnswers = localStorage.getItem("givenAnswers");
+
+    let frontendScore = 0;
+    let backendScore = 0;
+    let beheerScore = 0;
+
+    if(givenAnswers) {
+      givenAnswers = JSON.parse(givenAnswers);
+
+      for(let i = 0; i < givenAnswers.length; i++) {
+        if(givenAnswers[i]["category"] == "Frontend") {
+          frontendScore += givenAnswers[i]["points"];
+        } else if(givenAnswers[i]["category"] == "Backend") {
+          backendScore += givenAnswers[i]["points"];
+        } else if(givenAnswers[i]["category"] == "Systeembeheer") {
+          beheerScore += givenAnswers[i]["points"];
+        }
+      }
+    }
+
+    const frontend = frontendScore / 3 * 100;
+    const backend = backendScore / 3 * 100;
+    const beheer = beheerScore / 3 * 100;
+
+    document.getElementById("frontEndProgress").style.width = frontend + "%";
+    document.getElementById("backEndProgress").style.width = backend + "%";
+    document.getElementById("systeembeheerProgress").style.width = beheer + "%";
   }, 100)
 </script>
 </html>
