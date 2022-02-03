@@ -1,14 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+}
 
-  .header {
-    width: 100vw;
-    padding: 30px;
-    background-color: #1c85bc;
-  }
+.header {
+  width: 100vw;
+  padding: 30px;
+  background-color: #1c85bc;
+}
 
   .center {
     padding: 150px;
@@ -50,3 +51,4 @@
   #result{
     margin-left: 21px;
   }
+  
