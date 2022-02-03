@@ -11,6 +11,7 @@
   background-color: #1c85bc;
 }
 
+<<<<<<< Updated upstream
 .center {
   padding: 150px;
 }
@@ -51,3 +52,46 @@
 #result {
   margin-left: 21px;
 }
+=======
+  .center {
+    padding: 150px;
+  }
+  
+  .hiddenbutton2{
+    position: absolute;
+    background:none;
+    border:none;
+    color: #FFFFFF;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  .hiddenbutton1{
+    position: absolute;
+    background:none;
+    border:none;
+    color: #FFFFFF;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  .hintbutton{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #e74e0e;
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+  
+  }
+  
+  #result{
+    margin-left: 21px;
+  }
+  
+>>>>>>> Stashed changes
