@@ -6,8 +6,9 @@
 }
 
 .bar {
-    background-color: black;
+    background-color: #00000027;
     height: 30px;
+    margin-top: 10px;
 }
 
 .progress {
