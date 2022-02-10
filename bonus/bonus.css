@@ -1,9 +1,19 @@
-#html-select{
+.html-select{
     width: fit-content;
 }
 
 .bonusquestion{
     font-size: 25px;
     border: 2px black solid;
+}
+
+.information{
+    float: right;
+    margin-top: -20px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
 }
 
