@@ -25,11 +25,18 @@ body.result {
 }
 
 .header {
+  box-sizing: border-box;
   width: 100%;
   padding: 30px;
   background: linear-gradient(90deg,  #0e85c5 0%, #228ac2 100%);
   color: #fff;
   height: fit-content;
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .quiz .header {
@@ -39,7 +46,6 @@ body.result {
   background: linear-gradient(90deg,  #0e85c5 0%, #228ac2 100%);
   color: #fff;
   height: 100vh;
-  opacity: 0.95;
 }
 
   .center {
@@ -115,11 +121,12 @@ body.result {
     margin-top: 20px;
     font-weight: normal;
   }
-ul{
-  position: fixed;
+.links {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
   bottom: 0;
-  text-align: center;
-  margin-bottom: 25px;
+  padding: 0;
 }
   .white {
     color: white;
