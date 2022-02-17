@@ -159,7 +159,7 @@
         <script>
             function geekConfirm() {
                 var x;
-                if (confirm("Dit is een standaard setup voor een html bestand voor deze bonusvraag moet je wat gaan uitzoeken. een kleine tip is; Zoek op google: 'introduction html' op                                                                   (klik op 'OK' om naar de googlepagina te gaan)") === true) {
+                if (confirm("Dit is een standaard setup voor een html bestand. Voor deze bonusvraag moet je wat gaan uitzoeken. Een kleine tip: zoek op google naar 'introduction html' (klik op 'OK' om naar de googlepagina te gaan)") === true) {
                     window.open('https://www.google.com/search?q=introduction+html&rlz=1C1AWFC_nlNL918NL918&oq=introduction+html&aqs=chrome..69i57j0i512j0i22i30l5j69i60.7647j0j7&sourceid=chrome&ie=UTF-8');
                     x = "";
                 } else {
