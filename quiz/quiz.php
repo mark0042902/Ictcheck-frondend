@@ -65,8 +65,6 @@
     async function nextQuestion() {
       questionId++;
 
-      console.log(questionId, questions.length);
-
       if (questionId < questions.length) {
         const question = questions[questionId];
         const text = question[1];
