@@ -28,7 +28,7 @@ body.result {
   box-sizing: border-box;
   width: 100%;
   padding: 30px;
-  background: linear-gradient(90deg,  #0e85c5 0%, #228ac2 100%);
+  background: linear-gradient(90deg, #0e85c5 0%, #228ac2 100%);
   color: #fff;
   height: fit-content;
 }
@@ -42,85 +42,85 @@ body.result {
 .quiz .header {
   min-width: fit-content;
   width: 30%;
-  padding: 30px;
-  background: linear-gradient(90deg,  #0e85c5 0%, #228ac2 100%);
-  color: #fff;
   height: 100vh;
 }
 
-  .center {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    width: 100%;
-    height: 100%;
-  }
+.center {
 
-  .content-box {
-    padding: 40px;
-    width: 80%;
-    margin: 0px 40px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px 0px #dbdbdb;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
 
-  .center-bonus{
-    margin: 20px 40px;
-  }
-  
-  .hiddenbutton2{
-    position: absolute;
-    background:none;
-    border:none;
-    color: transparent;
-    right: 0;
-    bottom: 50%;
-    font-size: 20px;
-    padding: 20px;
-  }
-  
-  .hiddenbutton1{
-    position: absolute;
-    background:none;
-    border:none;
-    color: transparent;
-    left: 0;
-    bottom: 0;
-    font-size: 20px;
-    padding: 20px;
-  }
-  .next,
-  .hintbutton{
-    margin-top: 20px;
-    margin-left: 20px;
-    background-color: #e74e0e;
-    font-size: 20px;
-    padding: 20px;
-    border: none;
-    border-radius: 11px;
-  
-  }
-  
-  #result{
-    margin-left: 21px;
-  }
+.content-box {
+  padding: 40px;
+  width: 80%;
+  margin: 0px 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px #dbdbdb;
+}
 
-  .homepagetitle{
-    margin-left: 21px;
-    margin-top: 21px;
-  }
-  
-  h2 {
-    font-weight: normal;
-  }
+.center-bonus {
+  margin: 20px 40px;
+}
 
-  h4 {
-    margin-top: 20px;
-    font-weight: normal;
-  }
+.hiddenbutton2 {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  right: 0;
+  bottom: 50%;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.hiddenbutton1 {
+  position: absolute;
+  background: none;
+  border: none;
+  color: transparent;
+  left: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.next,
+.hintbutton {
+  margin-top: 20px;
+  margin-left: 20px;
+  background: linear-gradient(90deg, #0e85c5 0%, #228ac2 100%);
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 11px;
+  color: white;
+}
+
+#result {
+  margin-left: 21px;
+  margin-top: 20px;
+}
+
+.homepagetitle {
+  margin-left: 21px;
+  margin-top: 21px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h4 {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
 .links {
   position: absolute;
   width: 100%;
@@ -128,6 +128,11 @@ body.result {
   bottom: 0;
   padding: 0;
 }
-  .white {
-    color: white;
-  }
+
+.white {
+  color: white;
+}
+
+.bonus-next {
+  margin-left: 0px;
+}
