@@ -107,6 +107,8 @@
       } else {
         //Geef "niet ingevuld"-melding...
       }
+
+      selected.checked = false;
     }
   </script>
 </body>

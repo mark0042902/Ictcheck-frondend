@@ -15,7 +15,7 @@
     <h1>Ben jij ICT waardig?</h1>
   </div>
 
-  <h4 class="homepagetitle">Probeer te de verborgen knop te zoeken om naar de volgende pagina te gaan. Klik op De hint knop als het echt niet lukt.</h4>
+  <h4 class="homepagetitle">Probeer de verborgen knop te zoeken om naar de volgende pagina te gaan. Klik op de hint knop als het echt niet lukt.</h4>
   <button class="hintbutton" onclick="printhint()">Klik hier voor een hint</button>
   <div id="result"></div>
 
