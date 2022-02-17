@@ -151,7 +151,7 @@
                         <option value="title">title</option>
                     </select>&gt;
                 </div>
-                <input action="action" onclick="window.history.go(-1); return false;" type="submit" value="Volgende" class="next bonus-next" />
+                <input action="action" onclick="window.history.go(-1); return false;" type="submit" value="Terug naar score" class="next bonus-next" />
             </form>
 
         </div>
